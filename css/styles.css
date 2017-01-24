@@ -1,0 +1,48 @@
+
+
+p {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font size: 1.2em;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: .2em;
+  word-spacing: 1em;
+  line-height: 2em;
+  text-align: justify;
+  text-indent: 1em;
+  margin: 0.5em 2em 0.5em 2em;
+  /*margin-bottom: 1em; or top, right, & left */
+  border: 3px solid blue;
+  padding: .5em;
+}
+
+h1 {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-size: 2em;
+}
+
+.changecolor {
+  color: red;
+}
+
+.big {
+  font-size: 5em;
+}
+
+body {
+  color: blue;
+}
+
+#second-paragraph {
+  margin-left: 6em;
+}
+
+th, td {
+  border: 3px solid black;
+  font-size: 2em;
+  padding: 1em;
+}
+
+table {
+  border-collapse: collapse;
+}
