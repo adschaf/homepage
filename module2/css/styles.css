@@ -10,6 +10,20 @@ p {
   padding: .5em;
 }
 
+p.two {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font size: 1.2em;
+  text-align: justify;
+  margin: 0.5em;
+  border: 2px solid black;
+  padding: .5em;
+}
+
+p.three {
+  font-size: 1.4em;
+  border: 1.5px solid red;
+}
+
 h1 {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   font-size: 2em;
@@ -23,6 +37,7 @@ h2 {
 
 h3 {
   color: blue;
+  text-align: center;
 }
 
 .changecolor {
@@ -30,19 +45,24 @@ h3 {
 }
 
 .big {
-  font-size: 5em;
+  font-size: 4em;
 }
 
 body {
   color: black;
 }
 
+img {
+  display: block;
+}
 
 th, td {
+  align: center;
   border-left: 2px solid black;
   border-right: 2px solid black;
   font-size: 1em;
   padding: 1em;
+  color: red;
 }
 
 tr:first-child {
@@ -56,4 +76,40 @@ tr:last-child {
 
 table {
   border-collapse: collapse;
+}
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #33CAB1;
+}
+
+.interests {
+  background-color: white;
+}
+
+.contact {
+  background-color: white;
 }
