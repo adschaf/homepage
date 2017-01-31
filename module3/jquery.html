@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title> CMPS 262 Module 3 </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+    $(function() {
+      console.log("jQuery was loaded");
+      $("#first").addClass("big");
+      $("#first").html("<b>Hello World!</b>");
+      var course = $("#course").val();
+      console.log(course);
+      $("#course").val("Hello World!");
+      console.log($("#first").text());
+      $("button1").click(function() {
+        //$("div").fadeIn(2000);
+        //$("div").fadeOut(5000);
+        $("div").slideDown();
+        var course = $("#course").val();
+        $("#first").after(course + "<br>");
+        //$("body").append(course + "<br>");
+        setTimeOut(function() {
+          $("div").slideUp();
+        })
+      });
+      $("#button1").mouseover(function() {
+        $("#button1").css("color", "red");
+      });
+      $("#button1").on("mouseout", function() {
+        $("#button1").css("color", "black");
+      });
+      $("#course").keydown(function(e) {
+        $("body").append("Key Pressed: " + String.fromCharCode(e.which) + "<br>");
+      });
+
+      var table = $("#table").val();
+      $("#button").click(function() {
+        console.log("H")
+        $("#table").append("<tr> <td>" + $("#text").val() + "</td> </tr>");
+      });
+    });
+
+    </script>
+  </head>
+  <body>
+    <p id="first"> This is the first paragraph </p>
+    <p> This is the second paragraph </p>
+    <p> This is the third paragraph </p>
+    <input id="course" value="CMPS 262">
+    <div> This is the first div.</div>
+    <div> This is the second div.</div>
+    <button id="button1"> Click Me </button>
+    <br>
+    <br>
+    <table id="table">
+      <tr>
+        <td> Row 1 </td>
+      </tr>
+    </table>
+    <br>
+    <input id="text" name=" " value=" ">
+    <button id="button"> Add Row </button>
+  </body>
+</html>

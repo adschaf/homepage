@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="jquery-3.1.1.min.js"></script>
+    <script>
+    // $(function() {
+    //   console.log("jQuery was loaded");
+    //   $("#first").addClass("big");
+    //   $("#first").html("<b>Hello World!</b>");
+    //   var course = $("#course").val();
+    //   console.log(course);
+    //   $("#course").val("Hello World!");
+    //   console.log($("#first").text());
+    //   $("button1").click(function() {
+    //     //$("div").fadeIn(2000);
+    //     //$("div").fadeOut(5000);
+    //     $("div").slideDown();
+    //     var course = $("#course").val();
+    //     $("#first").after(course + "<br>");
+    //     //$("body").append(course + "<br>");
+    //     setTimeOut(function() {
+    //       $("div").slideUp();
+    //     })
+    //   });
+    //   $("#button1").mouseover(function() {
+    //     $("#button1").css("color", "red");
+    //   });
+    //   $("#button1").on("mouseout", function() {
+    //     $("#button1").css("color", "black");
+    //   });
+    //   $("#course").keydown(function(e) {
+    //     $("body").append("Key Pressed: " + String.fromCharCode(e.which) + "<br>");
+    //   });
+    //
+    //   var table = $("#table").val();
+    //   $("#button").click(function() {
+    //     console.log("H")
+    //     $("#table").append("<tr> <td>" + $("#text").val() + "</td> </tr>");
+    //   });
+    // });
+
+    $(function() {
+      console.log("jQuery was loaded");
+      $("#changecolor").mouseover(function() {
+        $("h2").css("color", "#FFB563")
+      });
+      $("#changecolor").on("mouseout", function() {
+        $(this).css("color", "#5f9ea0");
+      });
+      $("#hide").click(function() {
+        $("img").hide();
+      });
+      $("#show").click(function() {
+        $("img").show();
+      });
+      $("button").click(function(){
+        $("img").animate({
+            height: 'toggle'
+        });
+      });
+        $(".change").click( function() {
+        $("h2").css("color", "black");
+        $("h2").css("color", "#ff8000");
+        });
+    });
+
+
+    function showpage(page) {
+      $("#page1").css("display", "none");
+      $("#page2").css("display", "none");
+      $("#page3").css("display", "none");
+      $("#page4").css("display", "none");
+      if (page === 1) {
+        $("#page1").css("display", "block");
+      }
+      else if (page === 2) {
+        $("#page2").css("display", "block");
+      }
+      else if (page === 3) {
+        $("#page3").css("display", "block");
+      }
+      else if (page === 4) {
+        $("#page4").css("display","block");
+      }
+    }
+    </script>
+  </head>
+
+
+  <body>
+      <ul>
+        <li><a href="javascript:void(0)" onclick="showpage(1)"> About Me </a></li>
+        <li><a href="javascript:void(0)" onclick="showpage(2)"> Interests </a></li>
+        <li><a href="javascript:void(0)" onclick="showpage(3)"> Class Schedule </a></li>
+        <li style="float: right"><a class="active" href="javascript:void(0)"
+          onclick="showpage(4)"> Contact </a></li>
+      </ul>
+
+        <center>*** This is still in progress ***</center>
+        <center>
+          <h1 id="changecolor" style="color:#5f9ea0">
+          Alek Schaffer's Webpage </h1>
+        </center>
+
+
+      <div id="page1" style="display:none;" class="font">
+      <h2 align="center"> About Me </h2>
+      <p>
+        Alek Schaffer, Junior IT major at <a href="http://www.pointpark.edu">Point Park University</a>
+      <br>
+        I'm very active, I play basketball for Point Park University but I took this year off due
+        to focusing to academics.
+      <br>
+        In highschool I played football, basketball, track, baseball, and I would golf occasionally.
+      <br>
+      <img src="http://static.hudl.com/users/prod/2710501_bc92ecfcc29a415fb6c0458424235b16.jpg"
+        height="175" width="175"/>
+      <button> Animation </button>
+      </p>
+      </div>
+
+      <div id="page2" style="display:none;" class="font">
+      <h2 align="center"> Interests </h2>
+        <p id="two">
+          Computer wise, I like programming until I get stuck.
+          I like to hack computers only to test myself and improve my skills.
+          I love the beach and crab legs.
+        </p>
+      </div>
+
+      <div id="page3" style="display:none;" class="font">
+      <h2> Class Schedule </h2>
+      <table align="center">
+        <tr>
+          <td> Monday </td>
+          <td> Tuesday </td>
+          <td> Wednesday </td>
+          <td> Thursday </td>
+        </tr>
+        <tr>
+          <td> Introduction to Literacy </td>
+          <td> Principles of Marketing </td>
+          <td> Introduction to Literacy </td>
+          <td> Principles of Marketing </td>
+        </tr>
+        <tr>
+          <td> 11:20-12:50 </td>
+          <td> 9:40-11-10 </td>
+          <td> 11:20-12:50 </td>
+          <td> 9:40-11-10 </td>
+        </tr>
+        <tr>
+          <td> Western Civilization </td>
+          <td> Adanced Programming </td>
+          <td>  </td>
+          <td> Server Management </td>
+        </tr>
+        <tr>
+          <td> 6:00-9:00 </td>
+          <td> 6:00-9:00 </td>
+          <td>  </td>
+          <td> 6:00-9:00 </td>
+        </tr>
+      </table>
+    </div>
+
+      <div id="page4" style="display:none;" class="font">
+      <h2 align="center"> Contact Info </h2>
+
+      <p id="three">
+        <center>
+        Cell Phone #: 724-859-2571
+        Email: adschaf@pointpark.edu"
+        <br>
+        My GitHub page:
+        <a href="https://github.com/adschaf/homepage"> GitHub </a>
+        </center>
+      </p>
+
+    </div>
+    <div> Footer </div>
+  </body>
+</html>
